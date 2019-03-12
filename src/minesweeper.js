@@ -1,3 +1,14 @@
+class Board {
+    constructor(numberOfRows, numberOfColumns, numberOfBombs) {
+        this._numberOfBombs = numberOfBombs;
+        this._numberOfTiles = numberOfRows * numberOfColumns;
+        this._playerBoard = Board.generatePlayerBoard(numberOfRows, numberOfColumns);
+        this._bombBoard = Board.generateBombBoard(numberOfRows, numberOfColumns, numberOfBombs);
+    }
+}
+
+
+
 const generatePlayerBoard = (numberOfRows, numberOfColumns) => {
     const board = [];
     for(i = 0; i < numberOfRows; i++) {
